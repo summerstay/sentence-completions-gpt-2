@@ -54,11 +54,12 @@ def expand_node(sentence, past):
 # globals here
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 model = GPT2LMHeadModel.from_pretrained('gpt2')
-leaf_list = []
-branch_list = []
-complete_list = []
 
 while True:
+    leaf_list = []
+    branch_list = []
+    complete_list = []
+    
     probability_threshhold=float(input("probability cutoff (e.g. .001 or less):"))
     raw_prompt = input("partial sentence to complete:")
     
