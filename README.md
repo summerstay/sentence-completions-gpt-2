@@ -1,6 +1,8 @@
 # sentence-completions-gpt-2
 Uses gpt-2 to find all completions of a sentence over a certain probability threshold.
 
+Written to use Python 3.7. Requires import of torch and transformers (i.e. huggingface).
+
 
 Input: a probability threshhold, like .0001 (below)
 
