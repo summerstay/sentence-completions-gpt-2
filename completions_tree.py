@@ -88,6 +88,6 @@ for (sentence, prob) in sorted_complete_list:
     if prob>probability_threshhold:
         print(repr(tokenizer.decode(sentence[len(prompt):])).strip("'"),end='|')
     else:
-         print(repr(tokenizer.decode(sentence[len(prompt):])).strip("'"),end=':')
+         print(repr(tokenizer.decode(sentence[len(prompt):])).strip("'"),end='\\')
 
 
