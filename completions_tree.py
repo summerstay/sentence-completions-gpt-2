@@ -85,6 +85,9 @@ sorted_branch_list = sorted(branch_list, reverse=True,key=lambda x: x[1])
 #print just the completions
 for (sentence, prob) in sorted_complete_list:
     #print(round(prob,6),end=':')
-    print(repr(tokenizer.decode(sentence[len(prompt):])).strip("'"),end='|')
+    if prob>probability_threshhold:
+        print(repr(tokenizer.decode(sentence[len(prompt):])).strip("'"),end='|')
+    else:
+         print(repr(tokenizer.decode(sentence[len(prompt):])).strip("'"),end=':')
 
 
